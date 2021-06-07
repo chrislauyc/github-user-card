@@ -9,6 +9,7 @@ import {
     CardMedia,
     Button,
     withStyles,
+    Typography
 } from '@material-ui/core';
 const styles = {
     card:{
@@ -65,8 +66,8 @@ class UserCard extends React.Component{
                         title={'User Avatar'}
                     />
                     <CardContent>
-                        <div>{name}</div>
-                        <div>{location}</div>
+                        <Typography variant='body1'>{name}</Typography>
+                        <Typography variant='body1'>{location}</Typography>
                     </CardContent>
                 </CardActionArea>
                 <CardActions>

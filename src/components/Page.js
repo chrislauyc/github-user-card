@@ -6,17 +6,17 @@ import {
     withStyles,
     Container,
     Grid,
-    Typography
+    Typography,
 } from '@material-ui/core';
+import {grey} from '@material-ui/core/colors';
+import {fade} from '@material-ui/core/styles/colorManipulator';
 import {theme} from '../theme/theme'; 
 const styles = {
     mainCard:{
-        backgroundColor:theme.palette.background.paper,
         paddingTop:theme.spacing(3),
         margin:'0 auto',
     },
     followerCards:{
-        backgroundColor:theme.palette.background.paper,
         flexGrow:'1',
         minHeight:'100vh',
         margin:'auto'
@@ -24,7 +24,9 @@ const styles = {
     followerText:{
         padding:theme.spacing(3),
     },
-
+    gridContainer:{
+        backgroundColor: fade(grey[50],0.5)
+    },
 };
 class Page extends React.Component{
     constructor(){
@@ -52,7 +54,7 @@ class Page extends React.Component{
         const {setUserData} = this;
         const {classes} = this.props;
         return(
-            <>
+            <Container className={classes.gridContainer}>
                 <Grid container>
                     <Grid item className={classes.mainCard} spacing={4}>
                         <Container>
@@ -66,7 +68,7 @@ class Page extends React.Component{
                         </Container>
                     </Grid>
                 </Grid>
-            </>
+            </Container>
         );
     };
 }
