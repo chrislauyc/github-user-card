@@ -28,7 +28,8 @@ const styles={
           }
     },
     mainContainer:{
-        backgroundColor:fade(grey[50],0.5)
+        backgroundColor:fade(grey[50],0.5),
+        minHeight: '100vh',
     }
 };
 const defaultLink = '/chrislauyc';
