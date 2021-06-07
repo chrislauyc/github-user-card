@@ -6,18 +6,23 @@ import {
     IconButton,
     Typography,
     withStyles,
-    createMuiTheme
 } from '@material-ui/core';
 import {withRouter} from 'react-router';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import CodeIcon from '@material-ui/icons/Code';
-const theme = createMuiTheme();
+import {theme} from '../theme/theme'; 
+import {grey} from '@material-ui/core/colors'
 const styles={
     icon: {
       marginRight: theme.spacing(2),
     },
     codeIcon:{
-        marginLeft:theme.spacing(2)
+        marginLeft:theme.spacing(2),
+        color:'white',
+        backgroundColor:grey[800],
+        '&:hover':{
+            backgroundColor:grey[600]
+        }
     },
     title:{
         flexGrow:1
@@ -32,9 +37,9 @@ class Header extends React.Component{
         const {handleClickHome} = this;
         return(
             <header>
-                <AppBar position="relative">
+                <AppBar position="relative" >
                     <Toolbar>
-                        <GitHubIcon className={classes.icon}/>
+                        <GitHubIcon className={classes.icon} />
                             <Typography className={classes.title} onClick={handleClickHome} variant="h6" color="inherit" noWrap>
                                 GitHub Cards
                             </Typography>

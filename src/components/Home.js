@@ -9,6 +9,7 @@ import {
     TextField
 } from '@material-ui/core';
 import {Link} from 'react-router-dom';
+import {grey} from '@material-ui/core/colors';
 const theme = createMuiTheme();
 const styles={
     icon: {
@@ -21,6 +22,11 @@ const styles={
     heroButtons: {
       marginTop: theme.spacing(0),
     },
+    startButton:{
+        '&:hover': {
+            backgroundColor:grey[600]
+          }
+    }
 };
 const defaultLink = '/chrislauyc';
 class Home extends React.Component{
@@ -56,7 +62,7 @@ class Home extends React.Component{
                         <TextField value={userName} onChange={onChange} label={'GitHub User Name'} variant='outlined' />
                     </Grid>
                     <Grid item>
-                        <Button component={Link} to={userName?`/${userName}`:defaultLink} variant='contained' color='primary'>
+                        <Button className={classes.startButton} component={Link} to={userName?`/${userName}`:defaultLink} variant='contained' color='primary'>
                             {userName?'Search':'Get started'}
                         </Button>
                     </Grid>

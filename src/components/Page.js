@@ -4,12 +4,11 @@ import UserCard from './UserCard';
 import UserCards from './UserCards';
 import {
     withStyles,
-    createMuiTheme,
     Container,
     Grid,
     Typography
 } from '@material-ui/core';
-const theme = createMuiTheme();
+import {theme} from '../theme/theme'; 
 const styles = {
     mainCard:{
         backgroundColor:theme.palette.background.paper,

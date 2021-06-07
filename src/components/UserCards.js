@@ -2,9 +2,9 @@ import axios from 'axios';
 import React from 'react';
 import UserCard from './UserCard';
 import {
-    Grid,Container,Typography,withStyles,createMuiTheme
+    Grid,Container,Typography,withStyles
 } from '@material-ui/core';
-const theme = createMuiTheme();
+import {theme} from '../theme/theme'; 
 const styles = {
     cardGrid: {
         paddingTop: theme.spacing(2),
