@@ -55,7 +55,7 @@ class Page extends React.Component{
         const {classes} = this.props;
         return(
             <Container className={classes.gridContainer}>
-                <Grid container>
+                <Grid container direction='column'>
                     <Grid item className={classes.mainCard} spacing={4}>
                         <Container>
                             <UserCard userName={userName} setUserData={setUserData}/>
