@@ -1,7 +1,4 @@
-React lifecycles diagram
-https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+View GitHub users and their network of followers
+Deployed site url: https://github-cards-viewer.netlify.app/
 
-components:
-UserCards
-UserCard
-SearchBar
+Skills: React, react-router-dom, Material-UI
